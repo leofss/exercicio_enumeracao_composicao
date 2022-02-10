@@ -34,7 +34,7 @@ namespace exercicio_enumeracao_composicao
                 Console.WriteLine("Preço do produto: ");
                 double preco = double.Parse(Console.ReadLine());
                 Console.WriteLine("Quantidade do produto: ");
-                int quant = int.Parse(Console.ReadLine());
+                int quantidade = int.Parse(Console.ReadLine());
 
 
             }
