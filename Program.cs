@@ -23,7 +23,7 @@ namespace exercicio_enumeracao_composicao
             int n = int.Parse(Console.ReadLine());
 
             Client client = new Client(name, email, dateofbirth);
-            Order order = new Order(status, dateofbirth, client);
+            Order order = new Order(DateTime.Now, status, client);
 
 
             for (int i = 1; i < n; i++)

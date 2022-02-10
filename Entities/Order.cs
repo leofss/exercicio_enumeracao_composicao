@@ -10,7 +10,7 @@ namespace exercicio_enumeracao_composicao.Entities
     class Order
     {
         public DateTime Moment { get; set; }
-        public string Status { get; set; }
+        public OrderStatus Status { get; set; }
 
         public Client Client {get; set;}
         public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
