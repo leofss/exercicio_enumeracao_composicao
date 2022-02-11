@@ -6,7 +6,7 @@ namespace exercicio_enumeracao_composicao.Entities
 {
     class Product
     {
-        public string ProdNome { get; set; }
+        public string ProdName { get; set; }
         public double Price { get; set; }
 
         public Product()
@@ -14,9 +14,9 @@ namespace exercicio_enumeracao_composicao.Entities
 
         }
 
-        public Product(string prodNome, double price)
+        public Product(string prodName, double price)
         {
-            ProdNome = prodNome;
+            ProdName = prodName;
             Price = price;
         }
     }

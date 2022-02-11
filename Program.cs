@@ -1,6 +1,7 @@
 ﻿using System;
 using exercicio_enumeracao_composicao.Entities;
 using exercicio_enumeracao_composicao.Enums;
+using System.Collections.Generic;
 namespace exercicio_enumeracao_composicao
 {
     class Program
@@ -26,18 +27,26 @@ namespace exercicio_enumeracao_composicao
             Order order = new Order(DateTime.Now, status, client);
 
 
-            for (int i = 1; i < n; i++)
+            for (int i = 0; i < n; i++)
             {
-                Console.Write("Entre as info do produto #" + i);
                 Console.WriteLine("Nome do produto: ");
-                string prodnome = Console.ReadLine();
+                string prodname = Console.ReadLine();
                 Console.WriteLine("Preço do produto: ");
-                double preco = double.Parse(Console.ReadLine());
+                double pricepd = double.Parse(Console.ReadLine());
                 Console.WriteLine("Quantidade do produto: ");
-                int quantidade = int.Parse(Console.ReadLine());
+                int qnt = int.Parse(Console.ReadLine());
 
-
+                Product product = new Product(prodname, pricepd);
+                OrderItem orderItem = new OrderItem(qnt, pricepd, product);
+                order.AddItem(orderItem);
             }
+
+            Console.WriteLine();
+            Console.WriteLine("ORDER SUMMARY:");
+            Console.WriteLine(order);
+
+
+
         }
     }
 }
